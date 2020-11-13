@@ -12,6 +12,5 @@ Ext.define("Admin.view.grid.GridController", {
     },
     search: function () {
         var me = this;
-        debugger
     }
 });

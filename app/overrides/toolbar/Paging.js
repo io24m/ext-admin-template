@@ -4,9 +4,9 @@ Ext.define('Admin.override.toolbar.Paging', {
     emptyMsg: '',
     beforePageText: '页',
     afterPageText: '/ {0}',
-    firstText: '第一页',
+    firstText: '首页',
     prevText: '上一页',
     nextText: '下一页',
-    lastText: '最后一页',
+    lastText: '末页',
     refreshText: '刷新',
 });

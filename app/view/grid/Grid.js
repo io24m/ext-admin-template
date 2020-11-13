@@ -17,8 +17,9 @@ Ext.define("Admin.view.grid.Grid", {
     },
     tbar: [{
         xtype: 'button',
+        // ui: 'blue',
         text: '检索',
-        handler:'search'
+        handler: 'search'
     }],
     dockedItems: [{
         xtype: 'pagingtoolbar',
