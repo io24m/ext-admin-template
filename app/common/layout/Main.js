@@ -21,14 +21,17 @@ Ext.define('Admin.common.layout.Main', {
         height: 44,
         items: [{
                 xtype: 'component',
-                // paddind: '0',
-                // margin: '0',
-                // style: {
-                //     backgroundColor: 'aqua',
-                //     top: '0px'
-                // },
+                paddind: '0',
+                margin: '0',
+                style: {
+                    backgroundColor: '#35baf6',//#35baf6//#32404e
+                    height: '44px',
+                    top: '0px',
+                    color:'#fff',//adb3b8
+                    fontSize: '18px'
+                },
                 reference: 'senchaLogo',
-                // html: 'Sencha',
+                html: '<div class="main-logo"><img src="resources/images/company-logo.png">测试系统</div>',
                 width: 250
             }, {
                 margin: '0 0 0 8',
@@ -74,7 +77,7 @@ Ext.define('Admin.common.layout.Main', {
                 href: '#profile',
                 hrefTarget: '_self',
                 tooltip: '个人中心'
-            },{
+            }, {
                 iconCls: 'x-fa fa-user',
                 href: '#profile',
                 hrefTarget: '_self',
@@ -92,7 +95,7 @@ Ext.define('Admin.common.layout.Main', {
                 alt: '用户',
                 cls: 'header-right-profile-image',
                 src: 'resources/images/2.png'
-            },{
+            }, {
                 xtype: 'tbtext',
                 text: '李先生',
                 cls: 'top-user-name'

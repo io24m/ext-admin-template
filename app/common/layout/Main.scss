@@ -9,6 +9,18 @@
         border-radius: 20px;
     }
 }
+
 .shadow {
-    @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+    @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.1));
+}
+
+.main-logo {
+    line-height: 44px;
+
+    img { 
+        margin-left: 12px;
+        margin-right: 10px;
+        top: 8px;
+        position: relative;
+    }
 }
