@@ -42,6 +42,5 @@ Ext.define('Admin.view.grid.GridStore', {
     },
     // limit: me.pagination.pageSize,
     // offset: pageIndex - 1,
-    autoLoad: true,
     pageSize: 15
 });

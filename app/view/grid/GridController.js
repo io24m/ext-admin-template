@@ -1,6 +1,6 @@
 Ext.define("Admin.view.grid.GridController", {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.view_grid', 
+    alias: 'controller.view_grid',
     onItemSelected: function (sender, record) {
 
         // Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
@@ -10,7 +10,10 @@ Ext.define("Admin.view.grid.GridController", {
             //
         }
     },
-    search: function () {
+    search: function () { 
         var me = this;
+        var view = me.getView();
+        var store = view.getStore();
+        store.loadPage(1);
     }
 });

@@ -33,7 +33,7 @@ Ext.define('Admin.common.layout.Main', {
             }, {
                 margin: '0 0 0 8',
                 iconCls: 'x-fa fa-bars',
-                hidden: true,
+                // hidden: true,
                 handler: 'onToggleNavigationSize'
             }, '->', {
                 //     xtype: 'segmentedbutton',
@@ -74,7 +74,17 @@ Ext.define('Admin.common.layout.Main', {
                 href: '#profile',
                 hrefTarget: '_self',
                 tooltip: '个人中心'
+            },{
+                iconCls: 'x-fa fa-user',
+                href: '#profile',
+                hrefTarget: '_self',
+                tooltip: '个人中心'
             },
+            // {
+            //     xtype: 'tbtext',
+            //     text: '李先生',
+            //     cls: 'top-user-name'
+            // },
             {
                 xtype: 'image',
                 height: 35,
@@ -82,7 +92,11 @@ Ext.define('Admin.common.layout.Main', {
                 alt: '用户',
                 cls: 'header-right-profile-image',
                 src: 'resources/images/2.png'
-            }
+            },{
+                xtype: 'tbtext',
+                text: '李先生',
+                cls: 'top-user-name'
+            },
         ]
     }, {
         xtype: 'common_layout_maincontainerwrap',

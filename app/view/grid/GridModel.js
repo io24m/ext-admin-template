@@ -6,6 +6,7 @@ Ext.define('Admin.view.grid.GridModel', {
     alias: 'viewmodel.view_grid',
     stores: {
         gridstore: { 
+            // autoLoad: false,
             type: 'view_grid'
         }
     },

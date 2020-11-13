@@ -15,7 +15,7 @@ Ext.define("Admin.view.grid.Grid", {
     bind: {
         store: '{gridstore}'
     },
-    tbar: [{
+    tbar: ['->',{
         xtype: 'button',
         // ui: 'blue',
         text: '检索',
