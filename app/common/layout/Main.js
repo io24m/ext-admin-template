@@ -33,6 +33,7 @@ Ext.define('Admin.common.layout.Main', {
             }, {
                 margin: '0 0 0 8',
                 iconCls: 'x-fa fa-bars',
+                hidden: true,
                 handler: 'onToggleNavigationSize'
             }, '->', {
                 //     xtype: 'segmentedbutton',
