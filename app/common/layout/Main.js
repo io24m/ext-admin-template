@@ -106,6 +106,7 @@ Ext.define('Admin.common.layout.Main', {
             flex: 1,
             reference: 'mainCardPanel',
             itemId: 'contentPanel',
+            // padding: '10 0 0 10',
             layout: {
                 type: 'card',
                 anchor: '100%'
