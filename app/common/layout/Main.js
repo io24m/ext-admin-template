@@ -24,10 +24,10 @@ Ext.define('Admin.common.layout.Main', {
                 paddind: '0',
                 margin: '0',
                 style: {
-                    backgroundColor: '#35baf6',//#35baf6//#32404e
+                    backgroundColor: '#1470ad', //#35baf6//#32404e//#1470ad
                     height: '44px',
                     top: '0px',
-                    color:'#fff',//adb3b8
+                    color: '#fff', //adb3b8
                     fontSize: '18px'
                 },
                 reference: 'senchaLogo',
@@ -36,6 +36,7 @@ Ext.define('Admin.common.layout.Main', {
             }, {
                 margin: '0 0 0 8',
                 iconCls: 'x-fa fa-bars',
+                ui: 'header',
                 // hidden: true,
                 handler: 'onToggleNavigationSize'
             }, '->', {
@@ -79,6 +80,7 @@ Ext.define('Admin.common.layout.Main', {
                 tooltip: '个人中心'
             }, {
                 iconCls: 'x-fa fa-user',
+                ui: 'header',
                 href: '#profile',
                 hrefTarget: '_self',
                 tooltip: '个人中心'

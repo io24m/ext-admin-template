@@ -11,13 +11,13 @@ Ext.define("Admin.view.grid.Grid", {
     viewModel: {
         type: 'view_grid'
     },
-    title: 'grid',
+    // title: 'grid',
     bind: {
         store: '{gridstore}'
     },
-    tbar: ['->',{
+    tbar: ['->', {
         xtype: 'button',
-        // ui: 'blue',
+        ui: 'blue', 
         text: '检索',
         handler: 'search'
     }],
@@ -54,16 +54,23 @@ Ext.define("Admin.view.grid.Grid", {
             dataIndex: 'id'
         }, {
             text: '姓名',
-            dataIndex: 'name'
+            dataIndex: 'name',
+            width: 300
         },
         {
             text: '邮件',
             dataIndex: 'email',
-            flex: 1
+            width: 300
+        },
+        {
+            text: '邮件',
+            dataIndex: 'email',
+            width: 700
         },
         {
             text: '电话',
             dataIndex: 'phone',
+            minWidth: 100, 
             flex: 1
         }
     ],
