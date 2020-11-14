@@ -13,7 +13,12 @@ Ext.define('Admin.common.layoutwin.Main', {
         type: 'common_layoutwin_main'
     },
     layout: {
-        type: 'border'
+        type: 'border',
+        animate: true,
+        animatePolicy: {
+            x: true,
+            width: true
+        }
     },
     listeners: {
         // afterRender: 'mainRender',

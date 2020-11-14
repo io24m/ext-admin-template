@@ -32,10 +32,20 @@ Ext.define('Admin.common.layoutwin.MainController', {
         treelist.setMicro(!me.pressed);
         if (me.pressed) {
             ct.setWidth(maxWidth);
-            senchaLogo.setWidth(maxWidth);
+            senchaLogo.animate({
+                dynamic: true,
+                to: {
+                    width: maxWidth
+                }
+            });
         } else {
             ct.setWidth(minWidth);
-            senchaLogo.setWidth(minWidth);
+            senchaLogo.animate({
+                dynamic: true,
+                to: {
+                    width: minWidth
+                }
+            });
 
         }
         // Cookie.set(AppConfig.cookieStartWith + "main-left-panel-micro" + me.cookieEndWith, !me.pressed, 365);
