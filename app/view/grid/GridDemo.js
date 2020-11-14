@@ -13,6 +13,7 @@ Ext.define("Admin.view.grid.GridDemo", {
     readUrl: 'http://localhost:8849/search?keywords=好汉歌',
     page: true,
     pageSize: 12,
+    //autoLoad:true,
     tbar: ['->', {
         xtype: 'button',
         ui: 'blue',
