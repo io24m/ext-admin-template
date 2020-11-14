@@ -51,5 +51,11 @@ Ext.define("Admin.base.grid.Panel", {
             }];
         }
         me.callParent();
+    },
+    beforeLayout: function () {
+        var me = this,
+            height = Ext.Element.getViewportHeight() - 44;
+        me.height = height;
+        me.callParent(arguments);
     }
 });
