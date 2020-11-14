@@ -1,6 +1,6 @@
-Ext.define("Admin.view.grid.GridDemoController", {
+Ext.define("Admin.view.grid.noPage.GridController", {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.view_gridDemo',
+    alias: 'controller.view_grid_nopage_grid',
     onItemSelected: function (sender, record) {
 
         // Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);

@@ -1,13 +1,13 @@
-Ext.define("Admin.view.grid.GridDemo", {
+Ext.define("Admin.view.grid.page.Grid", {
     extend: 'Admin.base.grid.Panel',
-    xtype: 'view_gridDemo',
+    xtype: 'view_grid_page_grid',
     requires: [
-        'Admin.view.grid.GridDemoController',
-        'Admin.view.grid.GridDemoModel'
+        'Admin.view.grid.page.GridController',
+        'Admin.view.grid.page.GridModel'
     ],
-    controller: 'view_gridDemo',
+    controller: 'view_grid_page_grid',
     viewModel: {
-        type: 'view_gridDemo'
+        type: 'view_grid_page_grid'
     },
     title: 'gridDemo',
     readUrl: 'http://localhost:8849/search?keywords=好汉歌',

@@ -9,14 +9,6 @@ Ext.define("Admin.base.grid.Panel", {
     pageSize: 15,
     initComponent: function () {
         var me = this;
-        if (!me.page) {
-            me.callParent();
-            return;
-        }
-        if (!me.getReadUrl()) {
-            console.error("配置base_grid:readUrl")
-            return;
-        }
         var storeName = "gridStore" + Ext.Date.format(new Date(), "mdHis");
         var bindStoreName = "{" + storeName + "}";
         me.setBind({
@@ -33,27 +25,29 @@ Ext.define("Admin.base.grid.Panel", {
             pageSize: me.pageSize
         });
         vm.setStores(stores);
-        me.dockedItems = [{
-            xtype: 'pagingtoolbar',
-            dock: 'bottom',
-            bind: {
-                store: bindStoreName
-            },
-            items: [{
-                xtype: 'button',
-                text: '每页15条',
-                menu: {
-                    width: 50,
-                    items: [{
-                        text: '10'
-                    }, {
-                        text: '50'
-                    }, {
-                        text: '100'
-                    }]
-                }
-            }]
-        }];
+        if (me.page) {
+            me.dockedItems = [{
+                xtype: 'pagingtoolbar',
+                dock: 'bottom',
+                bind: {
+                    store: bindStoreName
+                },
+                items: [{
+                    xtype: 'button',
+                    text: '每页15条',
+                    menu: {
+                        width: 50,
+                        items: [{
+                            text: '10'
+                        }, {
+                            text: '50'
+                        }, {
+                            text: '100'
+                        }]
+                    }
+                }]
+            }];
+        }
         me.callParent();
     }
 });

@@ -14,6 +14,23 @@ Ext.define('Admin.common.layout.MainTreeStore', {
                 viewType: 'home',
                 routeId: 'home', // routeId defaults to viewType
                 leaf: true
+            }, {
+                text: '列表',
+                iconCls: 'x-fa fa-paper-plane',
+                viewType: 'email',
+                expanded: false,
+                selectable: false,
+                children: [{
+                    text: '未分页Grid',
+                    iconCls: 'x-fa fa-flask',
+                    viewType: 'view_grid_nopage_grid',
+                    leaf: true
+                },{
+                    text: '分页Grid',
+                    iconCls: 'x-fa fa-flask',
+                    viewType: 'view_grid_page_grid',
+                    leaf: true
+                }]
             },
             {
                 text: '邮件',
