@@ -38,7 +38,21 @@ Ext.define("Admin.base.grid.Panel", {
             dock: 'bottom',
             bind: {
                 store: bindStoreName
-            }
+            },
+            items: [{
+                xtype: 'button',
+                text: '每页15条',
+                menu: {
+                    width: 50,
+                    items: [{
+                        text: '10'
+                    }, {
+                        text: '50'
+                    }, {
+                        text: '100'
+                    }]
+                }
+            }]
         }];
         me.callParent();
     }

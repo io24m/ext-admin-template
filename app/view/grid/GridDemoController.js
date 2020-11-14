@@ -10,10 +10,20 @@ Ext.define("Admin.view.grid.GridDemoController", {
             //
         }
     },
-    search: function () { 
+    search: function () {
         var me = this;
         var view = me.getView();
         var store = view.getStore();
         store.loadPage(1);
+    },
+    op: function () {
+        var me = this;
+        var view = me.getView();
+        var selections = view.getSelection(); /**多选行**/
+
+    },
+    del: function (grid, rowIndex, colIndex) {
+        var rec = grid.getStore().getAt(rowIndex);
+        alert("Edit " + rec.get('name'));
     }
 });

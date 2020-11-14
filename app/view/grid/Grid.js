@@ -17,7 +17,7 @@ Ext.define("Admin.view.grid.Grid", {
     },
     tbar: ['->', {
         xtype: 'button',
-        ui: 'blue', 
+        ui: 'blue',
         text: '检索',
         handler: 'search'
     }],
@@ -70,7 +70,7 @@ Ext.define("Admin.view.grid.Grid", {
         {
             text: '电话',
             dataIndex: 'phone',
-            minWidth: 100, 
+            minWidth: 100,
             flex: 1
         }
     ],

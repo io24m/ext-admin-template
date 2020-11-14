@@ -14,13 +14,48 @@ Ext.define("Admin.view.grid.GridDemo", {
     page: true,
     pageSize: 12,
     //autoLoad:true,
+    selModel: {
+        selType: 'checkboxmodel',
+        injectCheckbox: 0,
+        mode: 'simple',
+        checkOnly: true,
+        allowDeselect: true
+    },
     tbar: ['->', {
         xtype: 'button',
         ui: 'blue',
         text: '检索',
         handler: 'search'
+    }, {
+        xtype: 'button',
+        ui: 'blue',
+        text: '操作',
+        handler: 'op'
     }],
+    enableLocking: false,
+    lockText: '锁定',
+    unlockText: '解锁',
     columns: [{
+            xtype: 'actioncolumn',
+            width: 50,
+            text: '操作',
+            menuText: '<i>操作</i>',
+            items: [{
+                iconCls: 'x-fa fa-cog',
+                tooltip: '编辑',
+                margin: '0 5 0 0',
+                padding: '0 5 0 0',
+                handler: function (grid, rowIndex, colIndex) {
+                    var rec = grid.getStore().getAt(rowIndex);
+                    //alert("Edit " + rec.get('name'));
+                }
+            }, {
+                //icon: 'extjs-build/examples/restful/images/delete.png',
+                iconCls: 'x-fa fa-cog',
+                tooltip: '删除',
+                handler: 'del'
+            }]
+        }, {
             text: 'id',
             dataIndex: 'id'
         }, {
