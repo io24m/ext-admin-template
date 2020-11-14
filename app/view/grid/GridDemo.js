@@ -37,14 +37,14 @@ Ext.define("Admin.view.grid.GridDemo", {
     unlockText: '解锁',
     columns: [{
             xtype: 'actioncolumn',
-            width: 50,
+            width: 100,
             text: '操作',
-            menuText: '<i>操作</i>',
             items: [{
-                iconCls: 'x-fa fa-cog',
+                iconCls: 'x-fa fa-edit',
                 tooltip: '编辑',
-                margin: '0 5 0 0',
-                padding: '0 5 0 0',
+                getStyle: function () {
+                    return 'margin-right:10px;'
+                },
                 handler: function (grid, rowIndex, colIndex) {
                     var rec = grid.getStore().getAt(rowIndex);
                     //alert("Edit " + rec.get('name'));
