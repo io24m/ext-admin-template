@@ -11,6 +11,7 @@ Ext.define("Admin.view.grid.noPage.Grid", {
     },
     readUrl: 'http://localhost:8849/search?keywords=好汉歌',
     //autoLoad:true,
+    maxHeight: 300,
     selModel: {
         selType: 'checkboxmodel',
         injectCheckbox: 0,
@@ -64,11 +65,6 @@ Ext.define("Admin.view.grid.noPage.Grid", {
             text: '邮件',
             dataIndex: 'email',
             width: 300
-        },
-        {
-            text: '邮件',
-            dataIndex: 'email',
-            width: 700
         },
         {
             text: '电话',

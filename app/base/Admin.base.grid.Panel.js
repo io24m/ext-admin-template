@@ -29,6 +29,8 @@ Ext.define("Admin.base.grid.Panel", {
             me.dockedItems = [{
                 xtype: 'pagingtoolbar',
                 dock: 'bottom',
+                margin: '0 0 0 0',
+                padding: '0 0 0 0',
                 bind: {
                     store: bindStoreName
                 },
