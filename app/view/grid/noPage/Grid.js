@@ -9,7 +9,6 @@ Ext.define("Admin.view.grid.noPage.Grid", {
     viewModel: {
         type: 'view_grid_nopage_grid'
     },
-    title: 'gridDemo',
     readUrl: 'http://localhost:8849/search?keywords=好汉歌',
     //autoLoad:true,
     selModel: {
