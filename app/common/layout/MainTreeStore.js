@@ -28,6 +28,12 @@ Ext.define('Admin.common.layout.MainTreeStore', {
                 leaf: true
             },
             {
+                text: '列表1',
+                iconCls: 'x-fa fa-flask',
+                viewType: 'view_gridDemo',
+                leaf: true
+            },
+            {
                 text: '个人中心',
                 iconCls: 'x-fa fa-user',
                 viewType: 'profile',
