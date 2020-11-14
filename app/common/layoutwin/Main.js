@@ -7,7 +7,7 @@ Ext.define('Admin.common.layoutwin.Main', {
         'Admin.common.layoutwin.MainModel'
     ],
     plugins: 'viewport',
-    xtype: 'app-main',
+    xtype: 'common_layoutwin_main',
     controller: 'common_layoutwin_main',
     viewModel: {
         type: 'common_layoutwin_main'

@@ -12,7 +12,7 @@ Ext.define("Admin.view.grid.page.Grid", {
     title: 'gridDemo',
     readUrl: 'http://localhost:8849/search?keywords=好汉歌',
     page: true,
-    pageSize: 100,
+    pageSize: 32,
     //autoLoad:true,
     selModel: {
         selType: 'checkboxmodel',

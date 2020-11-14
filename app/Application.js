@@ -25,8 +25,9 @@ Ext.define('Admin.Application', {
         loggedIn = localStorage.getItem("isLogin");
         //获取权限数据
         //加载指定视图
-        Ext.widget('app-main');
+        // Ext.widget('app-main');
         // Ext.widget(loggedIn ? 'common_layout_main' : 'common_login');
+        Ext.widget(loggedIn ? 'common_layoutwin_main' : 'common_login');
     },
     onAppUpdate: function () {
         Ext.Msg.confirm('Application Update', 'This application has an update, reload?',

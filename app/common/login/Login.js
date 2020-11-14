@@ -28,7 +28,7 @@ Ext.define('Admin.commmon.login.Login', {
         align: 'center',
         pack: 'center'
     },
-    title: '',
+    title: '登录系统',
     items: [{
         xtype: 'form',
         bodyPadding: '20 20',
@@ -43,7 +43,7 @@ Ext.define('Admin.commmon.login.Login', {
         },
         items: [{
                 xtype: 'label',
-                text: 'Sign into your account'
+                text: '登录您的账户'
             },
             {
                 xtype: 'textfield',
@@ -53,7 +53,7 @@ Ext.define('Admin.commmon.login.Login', {
                 height: 55,
                 hideLabel: true,
                 allowBlank: false,
-                emptyText: 'user id',
+                emptyText: '用户名',
                 // triggers: {
                 //     glyphed: {
                 //         cls: 'trigger-glyph-noop auth-email-trigger'
@@ -65,7 +65,7 @@ Ext.define('Admin.commmon.login.Login', {
                 // cls: 'auth-textbox',
                 height: 55,
                 hideLabel: true,
-                emptyText: 'Password',
+                emptyText: '密码',
                 inputType: 'password',
                 name: 'password',
                 bind: '{password}',
@@ -95,7 +95,7 @@ Ext.define('Admin.commmon.login.Login', {
                 cls: 'form-panel-font-color rememberMeCheckbox',
                 height: 30,
                 bind: '{persist}',
-                boxLabel: 'Remember me'
+                boxLabel: '记住我'
             },
             {
                 xtype: 'button',
@@ -104,7 +104,7 @@ Ext.define('Admin.commmon.login.Login', {
                 // ui: 'soft-green',
                 iconAlign: 'right',
                 iconCls: 'x-fa fa-angle-right',
-                text: 'Login',
+                text: '登录',
                 formBind: true,
                 listeners: {
                     click: 'onLogin'
