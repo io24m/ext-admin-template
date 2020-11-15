@@ -36,6 +36,29 @@ Ext.define("Admin.view.grid.page.Grid", {
         xtype: 'datefield',
         fieldLabel: '客户',
         labelAlign: "right",
+    }, {
+        xtype: 'combo',
+        fieldLabel: '客户',
+        labelAlign: "right",
+        store: Ext.create('Ext.data.Store', {
+            fields: ['abbr', 'name'],
+            data: [{
+                    "abbr": "AL",
+                    "name": "Alabama"
+                },
+                {
+                    "abbr": "AK",
+                    "name": "Alaska"
+                },
+                {
+                    "abbr": "AZ",
+                    "name": "Arizona"
+                }
+            ]
+        }),
+        queryMode: 'local',
+        displayField: 'name',
+        valueField: 'abbr',
     }, '->', {
         xtype: 'button',
         ui: 'blue',
