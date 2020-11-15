@@ -17,7 +17,7 @@ Ext.define('Admin.common.layout.MainTreeStore', {
             }, {
                 text: '列表',
                 iconCls: 'x-fa fa-paper-plane',
-                viewType: 'email',
+                // viewType: 'email',
                 expanded: false,
                 selectable: false,
                 children: [{
