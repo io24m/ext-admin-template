@@ -17,17 +17,17 @@ Ext.define('Admin.common.layoutwin.MainController', {
 
     onToggleNavigationSize: function () {
         var me = this,
-            refs = me.getReferences()
-        senchaLogo = refs.senchaLogo,
+            refs = me.getReferences(),
+            senchaLogo = refs.senchaLogo,
+            navigationContainer = refs.navigationContainer,
+            navigationTreeListContainer = refs.navigationTreeListContainer,
             treelist = me.getView().down('treelist'),
             ct = treelist.ownerCt,
             maxWidth = 250,
             minWidth = 44;
-
         if (me.pressed === undefined) {
             me.pressed = false;
         }
-
         Ext.suspendLayouts();
         treelist.setMicro(!me.pressed);
         if (me.pressed) {
@@ -38,6 +38,14 @@ Ext.define('Admin.common.layoutwin.MainController', {
                     width: maxWidth
                 }
             });
+            navigationContainer.setWidth(maxWidth);
+            // navigationTreeListContainer.setWidth(maxWidth + 17);
+            navigationTreeListContainer.animate({
+                dynamic: true,
+                to: {
+                    width: maxWidth + 17
+                }
+            });
         } else {
             ct.setWidth(minWidth);
             senchaLogo.animate({
@@ -46,7 +54,14 @@ Ext.define('Admin.common.layoutwin.MainController', {
                     width: minWidth
                 }
             });
-
+            navigationContainer.setWidth(minWidth);
+            // navigationTreeListContainer.setWidth(minWidth + 17);
+            navigationTreeListContainer.animate({
+                dynamic: true,
+                to: {
+                    width: minWidth + 17
+                }
+            });
         }
         // Cookie.set(AppConfig.cookieStartWith + "main-left-panel-micro" + me.cookieEndWith, !me.pressed, 365);
 
