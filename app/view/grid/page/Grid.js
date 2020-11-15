@@ -9,7 +9,7 @@ Ext.define("Admin.view.grid.page.Grid", {
     viewModel: {
         type: 'view_grid_page_grid'
     },
-    title: 'gridDemo',
+    // title: 'gridDemo',
     readUrl: 'http://localhost:8849/search?keywords=好汉歌',
     page: true,
     pageSize: 32,
@@ -21,7 +21,22 @@ Ext.define("Admin.view.grid.page.Grid", {
         checkOnly: true,
         allowDeselect: true
     },
-    tbar: ['->', {
+    tbar: [{
+        xtype: 'textfield',
+        fieldLabel: '客户',
+        labelAlign: "right",
+        labelWidth: 50,
+        width: 150,
+        //bind: "{param.Kh}"
+    }, {
+        xtype: 'textfield',
+        fieldLabel: '客户',
+        labelAlign: "right",
+    }, {
+        xtype: 'datefield',
+        fieldLabel: '客户',
+        labelAlign: "right",
+    }, '->', {
         xtype: 'button',
         ui: 'blue',
         text: '检索',

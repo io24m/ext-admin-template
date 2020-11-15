@@ -27,6 +27,8 @@
 
 $color-blue: dynamic(#167abc);
 $grid-row-cell-focus-border-width:dynamic(0px);
+$grid-row-cell-selected-background-color: dynamic(#dedede);
+
 //UI Styles for buttons
 @include extjs-button-small-ui(
     $ui: 'soft-blue',
