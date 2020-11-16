@@ -15,13 +15,15 @@ Ext.define('Admin.Application', {
     },
     mixins: {
         utils: 'Admin.common.utils.Utils',
-        appInit: 'Admin.AppInit'
+        appInit: 'Admin.AppInit',
+        slimScroll:'Admin.common.utils.SlimScroll'
     },
     launch: function () {
         //初始化
         var me = this;
         me.mixins.appInit.init();
         me.utils = me.mixins.utils;
+        me.slimScroll = me.mixins.slimScroll.slimScroll;
         window.app = me;
         //登录逻辑
         var loggedIn;
