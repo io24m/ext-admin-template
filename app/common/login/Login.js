@@ -1,4 +1,4 @@
-Ext.define('App.commmon.login.Login', {
+Ext.define('App.common.login.Login', {
     extend: 'Ext.window.Window',
     xtype: 'common_login',
 

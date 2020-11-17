@@ -13,16 +13,10 @@ Ext.define('App.Application', {
             quickTips: true
         }
     },
-    mixins: {
-        utils: 'App.common.utils.Utils',
-        appInit: 'App.AppInit'
-    },
     launch: function () {
         //初始化
-        var me = this;
-        me.mixins.appInit.init();
-        me.utils = me.mixins.utils;
-        window.application = me;
+        App.AppInit.init();
+        App.Util = App.common.utils;
         //登录逻辑
         var loggedIn;
         loggedIn = localStorage.getItem("isLogin");
@@ -32,8 +26,9 @@ Ext.define('App.Application', {
         }
         //获取权限数据
         //加载指定视图
+        Ext.widget('common_layoutwin_main');
         // Ext.widget(loggedIn ? 'common_layout_main' : 'common_login');
-        Ext.widget(loggedIn ? 'common_layoutwin_main' : 'common_login');
+        // Ext.widget(loggedIn ? 'common_layoutwin_main' : 'common_login');
     },
     onAppUpdate: function () {
         Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
