@@ -1,4 +1,4 @@
-Ext.define("Admin.common.login.LoginController", {
+Ext.define("App.common.login.LoginController", {
     extend: 'Ext.app.ViewController',
     alias: 'controller.common_login',
     onLogin: function () {
@@ -7,5 +7,6 @@ Ext.define("Admin.common.login.LoginController", {
         localStorage.setItem("isLogin", true);
         this.getView().destroy();
         Ext.widget('common_layout_main');
+        this.redirectTo('home', true);
     }
 });

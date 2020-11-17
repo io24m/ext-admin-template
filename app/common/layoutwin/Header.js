@@ -1,4 +1,4 @@
-Ext.define('Admin.common.layoutwin.Header', {
+Ext.define('App.common.layoutwin.Header', {
     extend: 'Ext.toolbar.Toolbar',
     cls: 'sencha-dash-dash-headerbar shadow',
     xtype: 'common_layoutwin_header',

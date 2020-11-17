@@ -1,4 +1,4 @@
-Ext.define('Admin.view.home.Home', {
+Ext.define('App.view.home.Home', {
     extend: 'Ext.container.Container',
     xtype: 'home',
     // margin: '20 0 0 20', 
@@ -20,9 +20,6 @@ Ext.define('Admin.view.home.Home', {
         var me = this;
         // debugger
         // app.slimScroll
-
-
-
         me.callParent();
     }
 });

@@ -1,4 +1,4 @@
-Ext.define('Admin.common.layout.MainTreeStore', {
+Ext.define('App.common.layout.MainTreeStore', {
     extend: 'Ext.data.TreeStore',
     alias: 'store.common_layout_main',
 

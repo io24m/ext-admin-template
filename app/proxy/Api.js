@@ -1,4 +1,4 @@
-Ext.define('Admin.proxy.Api', {
+Ext.define('App.proxy.Api', {
     extend: 'Ext.data.proxy.Ajax',
     alias: 'proxy.api',
     actionMethods: {

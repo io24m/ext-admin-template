@@ -3,16 +3,19 @@
  * and launch() the Application class.
  */
 Ext.application({
-    extend: 'Admin.Application',
+    extend: 'App.Application',
 
-    name: 'Admin',
+    name: 'App',
 
     requires: [
-        // This will automatically load all classes in the Admin namespace
+        // This will automatically load all classes in the App namespace
         // so that application classes do not need to require each other.
-        'Admin.*'
+        'App.*'
+        // 'App.base.*',
+        // 'App.override.*',
+        // 'App.proxy'
     ],
 
     // The name of the initial view to create.
-    //mainView: 'Admin.view.main.Main'
+    // mainView: 'App.view.main.Main'
 });

@@ -1,10 +1,9 @@
-Ext.define('Admin.common.layout.Main', {
+Ext.define('App.common.layout.Main', {
     extend: 'Ext.container.Viewport',
     requires: [
         'Ext.button.Segmented',
         'Ext.list.Tree',
-        'Admin.common.layout.MainTreeStore',
-        // 'myApp.store.MainTreeStore'
+        'App.common.layout.MainTreeStore'
     ],
     xtype: 'common_layout_main',
     controller: 'common_layout_main',

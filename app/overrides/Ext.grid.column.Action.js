@@ -1,4 +1,4 @@
-Ext.define('Admin.override.grid.column.Action', {
+Ext.define('App.override.grid.column.Action', {
     override: 'Ext.grid.column.Action',
     menuText: '<i>操作</i>',
     defaultRenderer: function (v, cellValues, record, rowIdx, colIdx, store, view) {

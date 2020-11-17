@@ -1,4 +1,4 @@
-Ext.define('Admin.common.layoutwin.MainController', {
+Ext.define('App.common.layoutwin.MainController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.common_layoutwin_main',
     //监听：当找不到匹配的路由时将执行该事件unmatchedroute

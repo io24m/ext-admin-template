@@ -1,4 +1,4 @@
-Ext.define('Admin.override.form.field.Text', {
+Ext.define('App.override.form.field.Text', {
     override: 'Ext.form.field.Text',
     
     minLengthText: '最小长度为 {0}',

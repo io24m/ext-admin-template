@@ -1,7 +1,7 @@
-Ext.define("Admin.base.grid.Panel", {
+Ext.define("App.base.grid.Panel", {
     extend: 'Ext.grid.Panel',
     requires: [
-        'Admin.base.toolbar.Paging'
+        'App.base.toolbar.Paging'
     ],
     xtype: 'base_grid',
     config: {
@@ -20,7 +20,7 @@ Ext.define("Admin.base.grid.Panel", {
         });
         vm = me.getViewModel();
         var stores = {};
-        stores[storeName] = Ext.create("Admin.base.data.Store", {
+        stores[storeName] = Ext.create("App.base.data.Store", {
             proxy: {
                 api: {
                     read: me.getReadUrl()

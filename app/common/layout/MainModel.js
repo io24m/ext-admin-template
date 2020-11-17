@@ -1,4 +1,4 @@
-Ext.define('Admin.common.layout.MainModel', {
+Ext.define('App.common.layout.MainModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.common_layout_main',
 

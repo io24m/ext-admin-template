@@ -1,10 +1,10 @@
-Ext.define('Admin.common.layoutwin.Main', {
+Ext.define('App.common.layoutwin.Main', {
     extend: 'Ext.container.Container',
     requires: [
-        'Admin.common.layoutwin.Header',
-        'Admin.common.layoutwin.Menu',
-        'Admin.common.layoutwin.MainController',
-        'Admin.common.layoutwin.MainModel'
+        'App.common.layoutwin.Header',
+        'App.common.layoutwin.Menu',
+        'App.common.layoutwin.MainController',
+        'App.common.layoutwin.MainModel'
     ],
     plugins: 'viewport',
     xtype: 'common_layoutwin_main',

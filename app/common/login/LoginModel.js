@@ -1,4 +1,4 @@
-Ext.define('Admin.common.login.LoginModel', {
+Ext.define('App.common.login.LoginModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.common_login',
 

@@ -1,9 +1,9 @@
-Ext.define("Admin.view.grid.noPage.Grid", {
-    extend: 'Admin.base.grid.Panel',
+Ext.define("App.view.grid.noPage.Grid", {
+    extend: 'App.base.grid.Panel',
     xtype: 'view_grid_nopage_grid',
     requires: [
-        'Admin.view.grid.noPage.GridController',
-        'Admin.view.grid.noPage.GridModel'
+        'App.view.grid.noPage.GridController',
+        'App.view.grid.noPage.GridModel'
     ],
     controller: 'view_grid_nopage_grid',
     viewModel: {

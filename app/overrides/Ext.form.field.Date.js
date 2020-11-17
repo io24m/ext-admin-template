@@ -1,4 +1,4 @@
-Ext.define('Admin.override.form.field.Date', {
+Ext.define('App.override.form.field.Date', {
     override: 'Ext.form.field.Date',
     format: 'Y-m-d',
     formatText: '日期格式要求为: 年-月-日',

@@ -1,4 +1,4 @@
-Ext.define('Admin.override.grid.header.Container', {
+Ext.define('App.override.grid.header.Container', {
     override: 'Ext.grid.header.Container',
     sortAscText: '升序',
     sortDescText: '降序',

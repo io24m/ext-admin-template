@@ -1,8 +1,8 @@
-Ext.define('Admin.common.layoutwin.Menu', {
+Ext.define('App.common.layoutwin.Menu', {
     extend: 'Ext.container.Container',
     xtype: 'common_layoutwin_menu',
     requires: [
-        'Admin.common.layout.MainTreeStore'
+        'App.common.layout.MainTreeStore'
     ],
     scrollable: false,
     width: 250,

@@ -1,9 +1,9 @@
-Ext.define("Admin.view.grid.page.Grid", {
-    extend: 'Admin.base.grid.Panel',
+Ext.define("App.view.grid.page.Grid", {
+    extend: 'App.base.grid.Panel',
     xtype: 'view_grid_page_grid',
     requires: [
-        'Admin.view.grid.page.GridController',
-        'Admin.view.grid.page.GridModel'
+        'App.view.grid.page.GridController',
+        'App.view.grid.page.GridModel'
     ],
     controller: 'view_grid_page_grid',
     viewModel: {

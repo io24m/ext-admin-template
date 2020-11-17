@@ -3,9 +3,9 @@
  * calls Ext.application(). This is the ideal place to handle application launch and
  * initialization details.
  */
-Ext.define('Admin.Application', {
+Ext.define('App.Application', {
     extend: 'Ext.app.Application',
-    name: 'Admin',
+    name: 'App',
     defaultToken: 'home',
     quickTips: false,
     platformConfig: {
@@ -14,17 +14,15 @@ Ext.define('Admin.Application', {
         }
     },
     mixins: {
-        utils: 'Admin.common.utils.Utils',
-        appInit: 'Admin.AppInit',
-        slimScroll:'Admin.common.utils.SlimScroll'
+        utils: 'App.common.utils.Utils',
+        appInit: 'App.AppInit'
     },
     launch: function () {
         //初始化
         var me = this;
         me.mixins.appInit.init();
         me.utils = me.mixins.utils;
-        me.slimScroll = me.mixins.slimScroll.slimScroll;
-        window.app = me;
+        window.application = me;
         //登录逻辑
         var loggedIn;
         loggedIn = localStorage.getItem("isLogin");

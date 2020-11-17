@@ -1,5 +1,5 @@
-Ext.define('Admin.model.Personnel', {
-    extend: 'Admin.model.Base',
+Ext.define('App.model.Personnel', {
+    extend: 'App.model.Base',
 
     fields: [
         'name', 'email', 'phone'

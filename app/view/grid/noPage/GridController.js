@@ -1,4 +1,4 @@
-Ext.define("Admin.view.grid.noPage.GridController", {
+Ext.define("App.view.grid.noPage.GridController", {
     extend: 'Ext.app.ViewController',
     alias: 'controller.view_grid_nopage_grid',
     onItemSelected: function (sender, record) {

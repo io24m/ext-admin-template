@@ -1,4 +1,4 @@
-Ext.define('Admin.base.toolbar.Paging', {
+Ext.define('App.base.toolbar.Paging', {
     extend: 'Ext.toolbar.Paging',
     xtype: 'base_pagingtoolbar',
     margin: '0 0 0 0',

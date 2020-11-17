@@ -1,4 +1,4 @@
-Ext.define('Admin.base.data.Store', {
+Ext.define('App.base.data.Store', {
     extend: 'Ext.data.Store',
     proxy: {
         type: 'api',

@@ -1,4 +1,4 @@
-Ext.define('Admin.override.toolbar.Paging', {
+Ext.define('App.override.toolbar.Paging', {
     override: 'Ext.toolbar.Paging',
     displayMsg: '',
     emptyMsg: '',

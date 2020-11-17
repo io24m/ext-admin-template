@@ -1,4 +1,4 @@
-Ext.define('Admin.AppInit', {
+Ext.define('App.AppInit', {
     init: function () {
         Ext.Date.monthNames = [
             '一月', '二月', '三月',

@@ -1,4 +1,4 @@
-Ext.define('Admin.override.view.Table', {
+Ext.define('App.override.view.Table', {
     override: 'Ext.view.Table',
     enableTextSelection: true
 });

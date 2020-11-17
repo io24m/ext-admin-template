@@ -1,10 +1,10 @@
-Ext.define('Admin.commmon.login.Login', {
+Ext.define('App.commmon.login.Login', {
     extend: 'Ext.window.Window',
     xtype: 'common_login',
 
     requires: [
-        'Admin.common.login.LoginController',
-        'Admin.common.login.LoginModel',
+        'App.common.login.LoginController',
+        'App.common.login.LoginModel',
         'Ext.layout.container.VBox',
         'Ext.container.Container',
         'Ext.form.field.Text',
