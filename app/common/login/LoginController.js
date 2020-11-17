@@ -6,7 +6,8 @@ Ext.define("App.common.login.LoginController", {
         //获取权限数据
         localStorage.setItem("isLogin", true);
         this.getView().destroy();
-        Ext.widget('common_layout_main');
-        this.redirectTo('home', true);
+        window.location.reload();
+        // Ext.widget('common_layout_main');
+        // this.redirectTo('home', true);
     }
 });
