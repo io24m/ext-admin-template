@@ -28,6 +28,7 @@ Ext.define('App.common.layoutwin.MainController', {
         if (me.pressed === undefined) {
             me.pressed = false;
         }
+        var micro = localStorage.getItem("Menu-Micro") ? true : false
         Ext.suspendLayouts();
         treelist.setMicro(!me.pressed);
         if (me.pressed) {
@@ -66,6 +67,7 @@ Ext.define('App.common.layoutwin.MainController', {
         // Cookie.set(AppConfig.cookieStartWith + "main-left-panel-micro" + me.cookieEndWith, !me.pressed, 365);
 
         me.pressed = !me.pressed;
+        localStorage.setItem("Menu-Micro", me.pressed)
         // if (Ext.isIE8) {
         //     this.repaintList(treelist, !me.pressed);
         // }

@@ -4,10 +4,19 @@ Ext.define("App.common.login.LoginController", {
     onLogin: function () {
         //进行用户验证
         //获取权限数据
-        localStorage.setItem("isLogin", true);
-        this.getView().destroy();
-        window.location.reload();
-        // Ext.widget('common_layout_main');
-        // this.redirectTo('home', true);
+        var me = this,
+            view = me.getView(),
+            vm = me.getViewModel();
+        App.Util.Http.post({
+            url: "/login",
+            params: {
+                account: vm.get("userid"),
+                password: vm.get("password")
+            }
+        }).then(function (res) {
+            localStorage.setItem("Admin-Token", res.result);
+            view.destroy();
+            window.location.reload();
+        });
     }
 });

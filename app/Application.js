@@ -15,28 +15,44 @@ Ext.define('App.Application', {
     },
     launch: function () {
         //初始化
-        App.AppInit.init();
         App.Util = App.common.utils;
-        //登录逻辑
-        var loggedIn;
-        loggedIn = localStorage.getItem("isLogin");
-        if (!loggedIn) {
+        //登录逻辑 
+        if (!localStorage.getItem("Admin-Token")) {
             Ext.widget('common_login');
             return;
         }
-        //获取权限数据
-        //加载指定视图
-        Ext.widget('common_layoutwin_main');
-        // Ext.widget(loggedIn ? 'common_layout_main' : 'common_login');
-        // Ext.widget(loggedIn ? 'common_layoutwin_main' : 'common_login');
-    },
-    onAppUpdate: function () {
-        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
-            function (choice) {
-                if (choice === 'yes') {
-                    window.location.reload();
-                }
+
+        App.Util.Http.auth({
+            url: "/auth",
+            params: {
+                auth: "A"
             }
-        );
+        }).then(function (res) {
+            console.log("加载权限：")
+            console.log(res)
+            return App.Util.Http.auth({
+                url: "/auth",
+                params: {
+                    auth: "B"
+                }
+            });
+        }).then(function (res) {
+            console.log("加载权限：")
+            console.log(res)
+            return App.Util.Http.auth({
+                url: "/auth",
+                params: {
+                    auth: "C"
+                }
+            });
+        }).then(function (res) {
+            console.log("加载权限：")
+            console.log(res)
+            console.log("初始化")
+            App.AppInit.init();
+            Ext.widget('common_layoutwin_main');
+        }).catch(function (err) {
+            Ext.widget('common_login');
+        });
     }
 });

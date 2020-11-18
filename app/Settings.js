@@ -1,4 +1,4 @@
 Ext.define('App.Settings', {
     singleton: true,
-    baseUrl: '/'
+    baseUrl: 'http://localhost:8091'
 });
