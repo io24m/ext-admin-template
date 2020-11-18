@@ -14,6 +14,7 @@ Ext.define('App.Application', {
         }
     },
     launch: function () {
+        var me = this;
         //初始化
         App.Util = App.common.utils;
         //登录逻辑 
@@ -51,6 +52,7 @@ Ext.define('App.Application', {
             console.log("初始化")
             App.AppInit.init();
             Ext.widget('common_layoutwin_main');
+            me.redirectTo("home", true);
         }).catch(function (err) {
             Ext.widget('common_login');
         });
