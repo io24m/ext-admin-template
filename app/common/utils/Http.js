@@ -43,7 +43,7 @@ Ext.define('App.common.utils.Http', {
                 }
                 resolve(res);
             }).catch(function (err) {
-                Ext.Msg.alert('登录过期', "请重新登录或刷新页面。", function () {
+                Ext.Msg.alert('登录过期', "请重新登录。", function () {
                     localStorage.setItem("Admin-Token", "")
                     window.location.reload()
                 });
