@@ -49,7 +49,7 @@ Ext.define('App.common.utils.Http', {
         return new Ext.Promise(function (resolve, reject) {
             me.auth(opts).then(function (res) {
                 if (res.success === false) {
-                    App.Util.Toast.error(res.message);
+                    App.common.utils.Toast.error(res.message);
                     reject(res);
                     return;
                 }

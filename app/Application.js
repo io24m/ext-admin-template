@@ -13,17 +13,22 @@ Ext.define('App.Application', {
             quickTips: true
         }
     },
+    init: function () {
+        // var me = this;
+        App.util = App.common.utils;
+    },
     launch: function () {
         var me = this;
-        //初始化
-        App.Util = App.common.utils;
         //登录逻辑  
-        if (!App.Util.Storage.getToken()) {
+        if (!App.util.Storage.getToken()) {
             Ext.widget('common_login');
             return;
         }
+        Ext.widget('common_layoutwin_main');
+        me.redirectTo("home", true);
+        return
         var server = Ext.ns("App.Server");
-        App.Util.Http.auth({
+        App.util.Http.auth({
             url: "/auth",
             params: {
                 auth: "A"
@@ -32,7 +37,7 @@ Ext.define('App.Application', {
             server.menu = [];
             console.log("加载权限：")
             console.log(res)
-            return App.Util.Http.auth({
+            return App.util.Http.auth({
                 url: "/auth",
                 params: {
                     auth: "B"
@@ -41,7 +46,7 @@ Ext.define('App.Application', {
         }).then(function (res) {
             console.log("加载权限：")
             console.log(res)
-            return App.Util.Http.auth({
+            return App.util.Http.auth({
                 url: "/auth",
                 params: {
                     auth: "C"
@@ -51,6 +56,7 @@ Ext.define('App.Application', {
             console.log("加载权限：")
             console.log(res)
             console.log("初始化")
+            // App.AppInit.init();
             Ext.widget('common_layoutwin_main');
             me.redirectTo("home", true);
         }).catch(function (err) {

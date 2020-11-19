@@ -7,14 +7,14 @@ Ext.define("App.common.login.LoginController", {
         var me = this,
             view = me.getView(),
             vm = me.getViewModel();
-        App.Util.Http.post({
+        App.util.Http.post({
             url: "/login",
             params: {
                 account: vm.get("userid"),
                 password: vm.get("password")
             }
         }).then(function (res) {
-            App.Util.Storage.setToken(res.result)
+            App.util.Storage.setToken(res.result)
             view.destroy();
             window.location.reload();
         });
