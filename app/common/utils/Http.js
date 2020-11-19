@@ -75,6 +75,10 @@ Ext.define('App.common.utils.Http', {
                             });
                             return
                         }
+                        var res = response.responseJson;
+                        if (res.success === false) {
+                            App.common.utils.Toast.error(res.message);
+                        }
                     }
                     opts.callback(options, success, response);
                 }
