@@ -22,13 +22,14 @@ Ext.define('App.Application', {
             Ext.widget('common_login');
             return;
         }
-
+       var server= Ext.ns("App.Server");
         App.Util.Http.auth({
             url: "/auth",
             params: {
                 auth: "A"
             }
         }).then(function (res) {
+            server.menu=[];
             console.log("加载权限：")
             console.log(res)
             return App.Util.Http.auth({

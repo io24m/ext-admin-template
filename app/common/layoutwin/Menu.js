@@ -2,7 +2,7 @@ Ext.define('App.common.layoutwin.Menu', {
     extend: 'Ext.container.Container',
     xtype: 'common_layoutwin_menu',
     requires: [
-        'App.common.layout.MainTreeStore'
+        // 'App.common.layout.MainTreeStore'
     ],
     scrollable: false,
     width: 250,
@@ -36,15 +36,16 @@ Ext.define('App.common.layoutwin.Menu', {
             xtype: 'treelist',
             reference: 'navigationTreeList',
             itemId: 'navigationTreeList',
+            name: "navigationTreeList",
             singleExpand: true,
             // singleExpand: true,
             // expanderOnly: false,
             // selected: true,
             // selectedParent: true,
             ui: 'nav',
-            store: {
-                type: 'common_layout_main',
-            },
+            // store: {
+            //     type: 'common_layout_main',
+            // },
             width: 250,
             expanderFirst: false,
             expanderOnly: false,
@@ -81,4 +82,10 @@ Ext.define('App.common.layoutwin.Menu', {
 
     //     me.callParent(arguments);
     // }
+    initComponent: function () {
+        var me = this; 
+        me.callParent();
+        var navigationTreeList=me.down('[name=navigationTreeList]');
+        navigationTreeList.setStore(Ext.create("App.common.layout.MainTreeStore"));
+    }
 });
