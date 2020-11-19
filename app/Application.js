@@ -22,14 +22,14 @@ Ext.define('App.Application', {
             Ext.widget('common_login');
             return;
         }
-       var server= Ext.ns("App.Server");
+        var server = Ext.ns("App.Server");
         App.Util.Http.auth({
             url: "/auth",
             params: {
                 auth: "A"
             }
         }).then(function (res) {
-            server.menu=[];
+            server.menu = [];
             console.log("加载权限：")
             console.log(res)
             return App.Util.Http.auth({
@@ -51,7 +51,6 @@ Ext.define('App.Application', {
             console.log("加载权限：")
             console.log(res)
             console.log("初始化")
-            App.AppInit.init();
             Ext.widget('common_layoutwin_main');
             me.redirectTo("home", true);
         }).catch(function (err) {
