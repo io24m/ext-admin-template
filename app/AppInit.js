@@ -13,6 +13,8 @@ Ext.define('App.AppInit', {
         ]
         Ext.Date.defaultFormat = 'Y-m-d';
         // Ext.Date.format(d, '"Y-m-d H:i:s"')
+        Ext.Ajax.setTimeout(10 * 60 * 1000);
+
         console.log("AppInit.init")
     }
 });

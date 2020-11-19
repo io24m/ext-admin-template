@@ -14,7 +14,7 @@ Ext.define("App.common.login.LoginController", {
                 password: vm.get("password")
             }
         }).then(function (res) {
-            localStorage.setItem("Admin-Token", res.result);
+            App.Util.Storage.setToken(res.result)
             view.destroy();
             window.location.reload();
         });

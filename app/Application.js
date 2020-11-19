@@ -17,8 +17,8 @@ Ext.define('App.Application', {
         var me = this;
         //初始化
         App.Util = App.common.utils;
-        //登录逻辑 
-        if (!localStorage.getItem("Admin-Token")) {
+        //登录逻辑  
+        if (!App.Util.Storage.getToken()) {
             Ext.widget('common_login');
             return;
         }
