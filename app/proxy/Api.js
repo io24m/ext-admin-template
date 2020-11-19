@@ -10,7 +10,7 @@ Ext.define('App.proxy.Api', {
     reader: {
         type: 'json',
         rootProperty: 'result',
-        totalProperty: "code"
+        totalProperty: "count"
     },
     pageParam: 'offset',
     limitParam: 'limit',
