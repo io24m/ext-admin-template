@@ -25,9 +25,10 @@ Ext.define('App.Application', {
             Ext.widget('common_login');
             return;
         }
-        Ext.widget('common_layoutwin_main');
-        me.redirectTo("home", true);
-        return
+        NProgress.start();
+        // Ext.widget('common_layoutwin_main');
+        // me.redirectTo("home", true);
+        // return
         var server = Ext.ns("App.Server");
         App.util.Http.auth({
             url: "/auth",
@@ -47,20 +48,13 @@ Ext.define('App.Application', {
         }).then(function (res) {
             console.log("加载权限：")
             console.log(res)
-            return App.util.Http.auth({
-                url: "/auth",
-                params: {
-                    auth: "C"
-                }
-            });
-        }).then(function (res) {
-            console.log("加载权限：")
-            console.log(res)
             console.log("初始化")
             // App.AppInit.init();
             Ext.widget('common_layoutwin_main');
             me.redirectTo("home", true);
+            NProgress.done();
         }).catch(function (err) {
+            NProgress.done();
             Ext.widget('common_login');
         });
     }
