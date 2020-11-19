@@ -24,8 +24,9 @@ Ext.define('App.common.layout.MainTreeStore', {
                     text: '未分页Grid',
                     iconCls: 'x-fa fa-flask',
                     viewType: 'view_grid_nopage_grid',
+                    routeId: 'list/nopage',
                     leaf: true
-                },{
+                }, {
                     text: '分页Grid',
                     iconCls: 'x-fa fa-flask',
                     viewType: 'view_grid_page_grid',
