@@ -12,9 +12,17 @@ Ext.define("App.view.grid.page.GridController", {
     },
     search: function () {
         var me = this;
+        var param = {
+            a: "1",
+            b: "2"
+        };
         var view = me.getView();
         var store = view.getStore();
-        store.loadPage(1);
+        // var proxy = store.getProxy();
+        // proxy.setExtraParams(param);
+        store.loadPage(1, {
+            params: param
+        });
     },
     op: function () {
         var me = this;
