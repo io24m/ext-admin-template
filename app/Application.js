@@ -16,6 +16,7 @@ Ext.define('App.Application', {
     init: function () {
         // var me = this;
         App.util = App.common.utils;
+        App.AppInit.init();
     },
     launch: function () {
         var me = this;

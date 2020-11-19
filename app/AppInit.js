@@ -1,7 +1,6 @@
 Ext.define('App.AppInit', {
     singleton: true,
     init: function () {
-        debugger
         var me = this;
         Ext.Date.monthNames = [
             '一月', '二月', '三月',
