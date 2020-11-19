@@ -3,14 +3,14 @@ Ext.define('App.proxy.Api', {
     alias: 'proxy.api',
     actionMethods: {
         create: 'POST',
-        read: 'GET',
+        read: 'POST',
         update: 'POST',
         destroy: 'POST'
     },
     reader: {
         type: 'json',
-        rootProperty: 'result.songs',
-        totalProperty: "result.songCount"
+        rootProperty: 'result',
+        totalProperty: "code"
     },
     pageParam: 'offset',
     limitParam: 'limit',

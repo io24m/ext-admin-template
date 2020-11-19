@@ -10,7 +10,7 @@ Ext.define("App.view.grid.page.Grid", {
         type: 'view_grid_page_grid'
     },
     // title: 'gridDemo',
-    readUrl: 'http://localhost:8849/search?keywords=好汉歌',
+    readUrl: '/list',
     page: true,
     pageSize: 32,
     //autoLoad:true,

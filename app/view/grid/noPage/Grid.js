@@ -9,7 +9,7 @@ Ext.define("App.view.grid.noPage.Grid", {
     viewModel: {
         type: 'view_grid_nopage_grid'
     },
-    readUrl: 'http://localhost:8849/search?keywords=好汉歌',
+    readUrl: '/list',
     //autoLoad:true, 
     selModel: {
         selType: 'checkboxmodel',
