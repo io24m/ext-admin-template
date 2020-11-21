@@ -10,17 +10,13 @@ Ext.define('App.view.home.Home', {
         xtype: 'button',
         text: 'show',
         handler: function () {
-            App.util.Toast.show("信息")
+            App.util.Toast.show("信息");
         }
     },{
         xtype: 'button',
         text: 'info',
         handler: function () {
-            App.util.Http.post({
-                url: '/auth'
-            }).then(function (res) {
-                App.util.Toast.info("信息")
-            })
+            App.util.Toast.info("信息");
         }
     }, {
         xtype: 'button',
@@ -38,12 +34,12 @@ Ext.define('App.view.home.Home', {
         xtype: 'button',
         text: 'error',
         handler: function () {
-            App.util.Toast.error("错误")
-            // App.util.Http.post({
-            //     url: '/err'
-            // }).then(function (res) {
-            //     debugger
-            // })
+            // App.util.Toast.error("错误")
+            App.util.Http.post({
+                url: '/err'
+            }).then(function (res) {
+                debugger
+            })
         }
     }]
 });

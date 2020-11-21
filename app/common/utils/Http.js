@@ -25,6 +25,10 @@ Ext.define('App.common.utils.Http', {
         return new Ext.Promise(function (resolve, reject) {
             Ext.Ajax.request(Ext.apply({}, {
                     callback: function (options, success, response) {
+                        if (!success) {
+                            App.common.utils.Toast.error("网络断开");
+                            return;
+                        }
                         // var res = Ext.JSON.decode(response.responseText);
                         resolve(response);
                     }
@@ -73,6 +77,10 @@ Ext.define('App.common.utils.Http', {
         opts = me.getOpts(opts);
         return Ext.Ajax.request(Ext.apply({}, {
                 callback: function (options, success, response) {
+                    if (!success) {
+                        App.common.utils.Toast.error("网络断开");
+                        return;
+                    }
                     if (response && response.status === 401) {
                         Ext.Msg.alert('登录过期', "请重新登录。", function () {
                             App.common.utils.Storage.setToken();
