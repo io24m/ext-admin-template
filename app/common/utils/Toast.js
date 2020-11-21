@@ -1,19 +1,19 @@
 Ext.define('App.common.utils.Toast', {
     singleton: true,
-    show: function (msg, title, time) {
-        setTimeout(function () {
-            Ext.toast({
-                title: title,
-                html: msg,
-                closable: true,
-                align: 'br',
-                frame: false,
-                slideInDuration: 300,
-                minHeight: 100,
-                width: 400,
-                minWidth: 400
-            });
-        }, time || 50);
+    show: function (msg, title) {
+        Ext.toast({
+            title: title,
+            html: msg,
+            closable: true,
+            align: 't',
+            frame: false,
+            slideInDuration: 400,
+            autoClose: true,
+            minHeight: 100,
+            width: 400,
+            minWidth: 400,
+            bodyBorder: true
+        });
     },
     info: function (msg, title) {
         App.common.utils.Toast.show('<b style="color:#67C23A;font-size: 14px">' + (msg || '') + '</b>', title || '提示');
