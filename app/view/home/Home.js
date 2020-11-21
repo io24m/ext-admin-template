@@ -8,6 +8,12 @@ Ext.define('App.view.home.Home', {
     },
     items: [{
         xtype: 'button',
+        text: 'show',
+        handler: function () {
+            App.util.Toast.show("信息")
+        }
+    },{
+        xtype: 'button',
         text: 'info',
         handler: function () {
             App.util.Http.post({

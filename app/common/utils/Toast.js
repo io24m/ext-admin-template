@@ -1,30 +1,35 @@
 Ext.define('App.common.utils.Toast', {
     singleton: true,
-    show: function (msg, title) {
+    show: function (msg, title, color) {
         Ext.toast({
-            title: title,
+            title: title ? title : null,
             html: msg,
             closable: true,
             align: 't',
             frame: false,
             slideInDuration: 400,
             autoClose: true,
-            minHeight: 100,
+            // minHeight: 100,
             width: 400,
             minWidth: 400,
-            bodyBorder: true
+            bodyBorder: true,
+            bodyStyle: {
+                fontSize: '14px',
+                color: color,
+                fontWeight: '600'
+            }
         });
     },
     info: function (msg, title) {
-        App.common.utils.Toast.show('<b style="color:#67C23A;font-size: 14px">' + (msg || '') + '</b>', title || '提示');
+        App.common.utils.Toast.show(msg || '', title || '提示', "#67C23A");
     },
     notify: function (msg, title) {
-        App.common.utils.Toast.show('<b style="color:#1B65B9;font-size: 14px">' + (msg || '') + '</b>', title || '通知');
+        App.common.utils.Toast.show(msg || '', title || '通知', '#1B65B9');
     },
     warn: function (msg, title) {
-        App.common.utils.Toast.show('<b style="color:#E6A23C;font-size: 14px">' + (msg || '') + '</b>', title || '警告');
+        App.common.utils.Toast.show(msg || '', title || '警告', '#E6A23C');
     },
     error: function (msg, title) {
-        App.common.utils.Toast.show('<b style="color:#F56C6C;font-size: 14px">' + (msg || '') + '</b>', title || '错误');
+        App.common.utils.Toast.show(msg || '', title || '错误', '#F56C6C');
     },
 });
