@@ -11,7 +11,7 @@ Ext.define('App.common.layout.MainTreeStore', {
         children: [{
                 text: '控制台',
                 iconCls: 'x-fa fa-desktop',
-                viewType: 'home',
+                viewType: 'page_home_home',
                 routeId: 'home', // routeId defaults to viewType
                 leaf: true
             }, {
@@ -23,13 +23,14 @@ Ext.define('App.common.layout.MainTreeStore', {
                 children: [{
                     text: '未分页Grid',
                     iconCls: 'x-fa fa-flask',
-                    viewType: 'view_grid_nopage_grid',
+                    viewType: 'page_grid_nopage_grid',
                     routeId: 'list/nopage',
                     leaf: true
                 }, {
                     text: '分页Grid',
                     iconCls: 'x-fa fa-flask',
-                    viewType: 'view_grid_page_grid',
+                    viewType: 'page_grid_page_grid',
+                    routeId: 'list/page',
                     leaf: true
                 }]
             },

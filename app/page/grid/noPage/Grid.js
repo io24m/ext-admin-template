@@ -1,19 +1,16 @@
-Ext.define("App.view.grid.page.Grid", {
+Ext.define("App.view.grid.noPage.Grid", {
     extend: 'App.base.grid.Panel',
-    xtype: 'view_grid_page_grid',
+    xtype: 'page_grid_nopage_grid',
     requires: [
-        'App.view.grid.page.GridController',
-        'App.view.grid.page.GridModel'
+        'App.view.grid.noPage.GridController',
+        'App.view.grid.noPage.GridModel'
     ],
-    controller: 'view_grid_page_grid',
+    controller: 'view_grid_nopage_grid',
     viewModel: {
-        type: 'view_grid_page_grid'
+        type: 'view_grid_nopage_grid'
     },
-    // title: 'gridDemo',
     readUrl: '/list',
-    page: true,
-    pageSize: 32,
-    //autoLoad:true,
+    //autoLoad:true, 
     selModel: {
         selType: 'checkboxmodel',
         injectCheckbox: 0,
@@ -21,45 +18,7 @@ Ext.define("App.view.grid.page.Grid", {
         checkOnly: true,
         allowDeselect: true
     },
-    tbar: [{
-        xtype: 'textfield',
-        fieldLabel: '客户',
-        labelAlign: "right",
-        labelWidth: 50,
-        width: 150,
-        //bind: "{param.Kh}"
-    }, {
-        xtype: 'textfield',
-        fieldLabel: '客户',
-        labelAlign: "right",
-    }, {
-        xtype: 'datefield',
-        fieldLabel: '客户',
-        labelAlign: "right",
-    }, {
-        xtype: 'combo',
-        fieldLabel: '客户',
-        labelAlign: "right",
-        store: Ext.create('Ext.data.Store', {
-            fields: ['abbr', 'name'],
-            data: [{
-                    "abbr": "AL",
-                    "name": "Alabama"
-                },
-                {
-                    "abbr": "AK",
-                    "name": "Alaska"
-                },
-                {
-                    "abbr": "AZ",
-                    "name": "Arizona"
-                }
-            ]
-        }),
-        queryMode: 'local',
-        displayField: 'name',
-        valueField: 'abbr',
-    }, '->', {
+    tbar: ['->', {
         xtype: 'button',
         ui: 'blue',
         text: '检索',
@@ -105,11 +64,6 @@ Ext.define("App.view.grid.page.Grid", {
             text: '邮件',
             dataIndex: 'email',
             width: 300
-        },
-        {
-            text: '邮件',
-            dataIndex: 'email',
-            width: 700
         },
         {
             text: '电话',

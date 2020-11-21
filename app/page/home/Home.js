@@ -1,6 +1,6 @@
 Ext.define('App.view.home.Home', {
     extend: 'Ext.container.Container',
-    xtype: 'home',
+    xtype: 'page_home_home',
     margin: '10 0 0 10',
     scrollable: 'y',
     defaults: {
