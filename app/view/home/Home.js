@@ -1,25 +1,17 @@
 Ext.define('App.view.home.Home', {
     extend: 'Ext.container.Container',
     xtype: 'home',
-    // margin: '20 0 0 20', 
+    margin: '10 0 0 10', 
     scrollable: 'y',
-    html: 'home<br/><br/><br/><br/><br/><br/>' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home' +
-        '<br/><br/><br/><br/><br/><br/><br/>home',
-    initComponent: function () {
-        var me = this;
-        // debugger
-        // app.slimScroll
-        me.callParent();
-    }
+    items: [{
+        xtype: 'button',
+        text: 'click',
+        handler: function () {
+            App.util.Http.post({
+                url: '/err'
+            }).then(function (res) {
+                debugger
+            })
+        }
+    }]
 });

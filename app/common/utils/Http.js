@@ -25,8 +25,8 @@ Ext.define('App.common.utils.Http', {
         return new Ext.Promise(function (resolve, reject) {
             Ext.Ajax.request(Ext.apply({}, {
                     callback: function (options, success, response) {
-                        var res = Ext.JSON.decode(response.responseText);
-                        resolve(res);
+                        // var res = Ext.JSON.decode(response.responseText);
+                        resolve(response);
                     }
                 },
                 opts));
@@ -36,11 +36,17 @@ Ext.define('App.common.utils.Http', {
         var me = this;
         return new Ext.Promise(function (resolve, reject) {
             me.baseRequest(opts).then(function (res) {
-                if (res.code === 0) {
+                if (res && res.status === 401) {
                     reject(res);
                 } else {
-                    resolve(res);
+                    var data = Ext.JSON.decode(res.responseText);
+                    resolve(data);
                 }
+                // if (res.code === 0) {
+                //     reject(res);
+                // } else {
+                //     resolve(res);
+                // }
             })
         });
     },
@@ -50,7 +56,7 @@ Ext.define('App.common.utils.Http', {
             me.auth(opts).then(function (res) {
                 if (res.success === false) {
                     App.common.utils.Toast.error(res.message);
-                    reject(res);
+                    // reject(res);
                     return;
                 }
                 resolve(res);
@@ -67,14 +73,22 @@ Ext.define('App.common.utils.Http', {
         opts = me.getOpts(opts);
         return Ext.Ajax.request(Ext.apply({}, {
                 callback: function (options, success, response) {
+                    if (response && response.status === 401) {
+                        Ext.Msg.alert('登录过期', "请重新登录。", function () {
+                            App.common.utils.Storage.setToken();
+                            window.location.reload()
+                        });
+                        return
+                    }
+
                     if (response && response.responseJson) {
-                        if (response.responseJson.code === 0) {
-                            Ext.Msg.alert('登录过期', "请重新登录。", function () {
-                                App.common.utils.Storage.setToken();
-                                window.location.reload()
-                            });
-                            return
-                        }
+                        // if (response.responseJson.code === 0) {
+                        //     Ext.Msg.alert('登录过期', "请重新登录。", function () {
+                        //         App.common.utils.Storage.setToken();
+                        //         window.location.reload()
+                        //     });
+                        //     return
+                        // }
                         var res = response.responseJson;
                         if (res.success === false) {
                             App.common.utils.Toast.error(res.message);
