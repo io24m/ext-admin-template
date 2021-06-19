@@ -1,7 +1,10 @@
 # App
 
+增加包
+sencha generate package Factory
+调试
 sencha app watch
-
+构建
 sencha app build
 
 

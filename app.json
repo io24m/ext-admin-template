@@ -17,7 +17,9 @@
      */
     "requires": [
         "font-awesome",
-        "locale"
+        "locale",
+        "factory",
+        "factory1"
     ],
     "locale": "zh_CN",
 
