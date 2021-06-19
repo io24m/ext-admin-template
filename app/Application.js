@@ -31,7 +31,7 @@ Ext.define('App.Application', {
         // return
         var server = Ext.ns("App.Server");
         App.util.Http.auth({
-            url: "/auth",
+            url: "/auth/data",
             params: {
                 auth: "A"
             }
@@ -40,7 +40,7 @@ Ext.define('App.Application', {
             console.log("加载权限：")
             console.log(res)
             return App.util.Http.auth({
-                url: "/auth",
+                url: "/auth/data",
                 params: {
                     auth: "B"
                 }

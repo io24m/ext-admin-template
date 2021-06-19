@@ -8,7 +8,7 @@ Ext.define("App.common.login.LoginController", {
             view = me.getView(),
             vm = me.getViewModel();
         App.util.Http.post({
-            url: "/login",
+            url: "/auth/login",
             params: {
                 account: vm.get("userid"),
                 password: vm.get("password")
